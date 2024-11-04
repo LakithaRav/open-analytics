@@ -56,7 +56,6 @@ class SQLiteConnector(ConnectorInterface.ConnectorInterface):
         query = f"SELECT name FROM sqlite_master WHERE type='table' AND name='{table}'"
         self.cursor.execute(query)
         result = self.cursor.fetchone()
-        print(result)
         return result
 
     def _create_log_table(self):
