@@ -10,7 +10,7 @@ readme = "README.md"
 requires-python = ">=3.8"
 keywords = ["analytics", "tracking", "tracing", "logging"]
 license = { text = "Apache License v2.0" }
-dynamic = ["version"]
+version = "0.1.0"
 
 [project.urls]
 Homepage = "https://github.com/LakithaRav/open-analytics"

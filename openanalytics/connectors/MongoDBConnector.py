@@ -4,19 +4,21 @@ pkg_install("pymongo")
 
 from pymongo import MongoClient
 from pymongo.results import InsertManyResult, InsertOneResult
-from openanalytics.connectors import ConnectorInterface
+from openanalytics.connectors.ConnectorInterface import ConnectorInterface
 import logging
 from openanalytics.version import APP_NAME
 
 
 class MongoDBConnector(ConnectorInterface):
+    host: str
+    db: str
+    client: MongoClient = None
 
     log = logging.getLogger(APP_NAME)
 
     def __init__(self, host, dbname):
         self.host = host
         self.db = dbname
-        self.client: MongoClient = None
 
     def _connect(self):
         self.client = MongoClient(self.host)

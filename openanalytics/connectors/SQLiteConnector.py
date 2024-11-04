@@ -5,16 +5,17 @@ from openanalytics.models import Identify, Log, Page, Token, Track
 import logging
 
 
-class SQLiteConnector(ConnectorInterface):
+class SQLiteConnector(ConnectorInterface.ConnectorInterface):
+    db: str
+    client: str = None
+    cursor: Cursor = None
 
     log = logging.getLogger("open-analytics")
 
-    def __init__(self, dbname):
+    def __init__(self, db: str):
 
         self.log.debug("SQLiteConnector initiated.")
-        self.db = dbname
-        self.client = None
-        self.cursor = None
+        self.db = db
         self._create_tables()
 
     def _connect(self):

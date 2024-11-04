@@ -6,7 +6,7 @@ import influxdb_client
 from influxdb_client import InfluxDBClient, Point, WritePrecision
 from influxdb_client.client.write_api import SYNCHRONOUS
 from openanalytics.utils import flatten_dict
-from openanalytics.connectors import ConnectorInterface
+from openanalytics.connectors.ConnectorInterface import ConnectorInterface
 from openanalytics.models import Identify, Log, Page, Token, Track
 import logging
 from openanalytics.version import APP_NAME
@@ -21,6 +21,11 @@ from openanalytics.version import APP_NAME
 
 
 class InfluxDBConnector(ConnectorInterface):
+    token: str
+    org: int
+    url: str
+    bucket: str
+    client: InfluxDBClient = None
 
     log = logging.getLogger(APP_NAME)
 
@@ -29,7 +34,6 @@ class InfluxDBConnector(ConnectorInterface):
         self.org = org
         self.url = url
         self.bucket = bucket
-        self.client = None
 
     def _connect(self):
         self.client = influxdb_client.InfluxDBClient(
