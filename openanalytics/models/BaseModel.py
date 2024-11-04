@@ -1,7 +1,5 @@
 from dataclasses import dataclass, field
 from datetime import datetime
-from dateutil.tz import tzlocal
-import time
 
 
 class BaseModel:

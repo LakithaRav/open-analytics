@@ -4,7 +4,6 @@ import queue
 import atexit
 from datetime import datetime, timezone
 import time
-from dateutil.tz import tzlocal
 from uuid import uuid4
 import json
 from openanalytics.consumer import Consumer, MAX_MSG_SIZE
