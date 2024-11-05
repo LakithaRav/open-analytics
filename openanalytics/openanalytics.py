@@ -14,7 +14,7 @@ from openanalytics.models import Identify, Track, Page, Token, Log
 
 
 @dataclass
-class Client:
+class OpenAnalytics:
     """Create a new open-analytics client."""
 
     host: str = "http://localhost"
