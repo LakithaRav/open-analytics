@@ -13,10 +13,10 @@ pip install open-analytics
 
 ## Initalize
 ```sh
-from openanalytics.client import Client
+from openanalytics.openanalytics import OpenAnalytics
 ```
 ```sh
-client = Client(connector=connector, sync_mode=False, debug=True)
+client = OpenAnalytics(connector=connector, sync_mode=False, debug=True)
 ```
 
 ## Connecting to data-source
@@ -25,7 +25,7 @@ As of now the open-analytics library provide Connector Plugins for three types o
 #### MongoDBConnector
 ```sh
 from openanalytics.connectors.MongoDBConnector import MongoDBConnector
-connector = MongoDBConnector(host="mongodb://localhost:27017/", dbname="demobucket")
+connector = MongoDBConnector(uri="mongodb://localhost:27017/", db="demobucket")
 ```
 
 #### InfluxDBConnector
