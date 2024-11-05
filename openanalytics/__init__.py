@@ -1,4 +1,4 @@
 from openanalytics.version import VERSION
-from openanalytics.client import Client
+from openanalytics.openanalytics import OpenAnalytics
 
 __version__ = VERSION

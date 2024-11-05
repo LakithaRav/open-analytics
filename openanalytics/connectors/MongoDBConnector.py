@@ -10,18 +10,18 @@ from openanalytics.version import APP_NAME
 
 
 class MongoDBConnector(ConnectorInterface):
-    host: str
+    uri: str
     db: str
     client: MongoClient = None
 
     log = logging.getLogger(APP_NAME)
 
-    def __init__(self, host, dbname):
-        self.host = host
-        self.db = dbname
+    def __init__(self, uri, db):
+        self.uri = uri
+        self.db = db
 
     def _connect(self):
-        self.client = MongoClient(self.host)
+        self.client = MongoClient(self.uri)
         self.log.debug("MongoDB connection opened")
 
     def _disconnect(self):

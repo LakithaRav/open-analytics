@@ -83,7 +83,7 @@ client.token(
 ```
 
 ### Track
-Track lets you record the actions your users perform. Every action triggers what Segment calls an “event”, which can also have associated properties.
+Track lets you record the actions your users perform. Every action triggers what open-analytics calls an “event”, which can also have associated properties.
 ```sh
 from openanalytics.models.Track import Track
 ```

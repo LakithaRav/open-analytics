@@ -105,7 +105,6 @@ class InfluxDBConnector(ConnectorInterface):
             for key, value in _flat_metadata.items():
                 _point.field(key, value)
 
-        print(data["timestamp"])
         _point.time(data["timestamp"])
         # _point.time(datetime.now())
 
