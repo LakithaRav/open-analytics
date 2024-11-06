@@ -96,7 +96,7 @@ class OpenAnalytics:
                 if self.send:
                     consumer.start()
 
-    def idetify(self, data: Identify) -> tuple:
+    def identify(self, data: Identify) -> tuple:
         """The Identify method lets you tie a user to their actions and record traits about them. It includes a unique User ID and any optional traits you know about them."""
 
         data.type = Identify.SIGNATURE

@@ -53,7 +53,7 @@ The Identify method lets you tie a user to their actions and record traits about
 from openanalytics.models.Identify import Identify
 ```
 ```sh
-client.idetify(
+client.identify(
     Identify(
         userID="UserName / UserEmail", 
         event="Custom Event", 
