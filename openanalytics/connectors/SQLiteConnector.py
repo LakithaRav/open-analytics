@@ -92,6 +92,7 @@ class SQLiteConnector(ConnectorInterface.ConnectorInterface):
          name           TEXT    NOT NULL,
          category           TEXT    NOT NULL,
          properties           BLOB,
+         event           TEXT    NOT NULL,
          metadata           BLOB,
          time           TEXT    NOT NULL,
          timestamp           TEXT    NOT NULL,

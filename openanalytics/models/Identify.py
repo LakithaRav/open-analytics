@@ -7,7 +7,6 @@ class Identify(BaseModel):
     SIGNATURE = "identify"
 
     userId: str
-    event: str
 
     def __init__(
         self,
@@ -19,7 +18,6 @@ class Identify(BaseModel):
         type: str = None,
         messageId: str = None,
     ):
-        super().__init__(metadata, time, timestamp, type, messageId)
         self.userId = userID
         self.event = event
         self.metadata = metadata
