@@ -15,16 +15,17 @@ class Page(BaseModel):
         name: str,
         category: str,
         properties: dict,
+        event: str,
         metadata: dict = None,
         time=None,
         timestamp: datetime = None,
         type: str = None,
         messageId: str = None,
     ):
-        super().__init__(metadata, time, timestamp, type, messageId)
         self.name = name
         self.category = category
         self.properties = properties
+        self.event = event
         self.metadata = metadata
         self.time = time
         self.timestamp = timestamp

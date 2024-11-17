@@ -8,7 +8,6 @@ class Log(BaseModel):
 
     summary: str
     level: str
-    event: str
 
     def __init__(
         self,
@@ -21,7 +20,6 @@ class Log(BaseModel):
         type: str = None,
         messageId: str = None,
     ):
-        super().__init__(metadata, time, timestamp, type, messageId)
         self.summary = summary
         self.level = level
         self.event = event

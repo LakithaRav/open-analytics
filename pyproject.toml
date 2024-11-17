@@ -3,7 +3,7 @@ requires = ["setuptools", "wheel", "pandas"]
 
 [project]
 name = "open-analytics"
-dependencies = ["pandas", "requests"]
+dependencies = ["pandas", "setuptools"]
 authors = [{ name = "Lakitha Samarasinghe", email = "Lakitharav@gmail.com" }]
 description = "Open sournce application analytics tracking library"
 readme = "README.md"

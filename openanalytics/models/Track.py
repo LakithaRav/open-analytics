@@ -7,7 +7,6 @@ class Track(BaseModel):
     SIGNATURE = "track"
 
     endpoint: str
-    event: str
     properties: dict
 
     def __init__(

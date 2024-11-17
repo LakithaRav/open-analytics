@@ -6,7 +6,6 @@ from datetime import datetime
 class Token(BaseModel):
     SIGNATURE = "token"
 
-    event: str
     action: str
     count: int
 

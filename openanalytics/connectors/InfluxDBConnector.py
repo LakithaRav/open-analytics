@@ -78,6 +78,7 @@ class InfluxDBConnector(ConnectorInterface):
 
             case Page.SIGNATURE:
 
+                _point.tag("event", data["event"])
                 _point.tag("name", data["name"])
                 _point.tag("category", data["category"])
                 _flat_data = self._flattern_dict(data["properties"])
